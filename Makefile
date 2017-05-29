@@ -124,7 +124,7 @@ dist/khmer-$(VERSION).tar.gz: $(SOURCES)
 clean: FORCE
 	cd lib && $(MAKE) clean || true
 	cd tests && rm -rf khmertest_* || true
-	rm -f pytest_runner-*.egg pytests.xml
+	rm -f pytests.xml
 	rm -f $(EXTENSION_MODULE)
 	rm -f khmer/*.pyc lib/*.pyc scripts/*.pyc tests/*.pyc oxli/*.pyc \
 		sandbox/*.pyc khmer/__pycache__/* sandbox/__pycache__/*
@@ -133,7 +133,7 @@ clean: FORCE
 	rm -Rf .coverage coverage-gcovr.xml coverage.xml
 	rm -f diff-cover.html
 	rm -Rf build dist
-	rm -rf __pycache__/ .eggs/ khmer.egg-info/
+	rm -rf __pycache__/ khmer.egg-info/
 	-rm -f *.gcov
 
 debug: FORCE
